@@ -1,0 +1,10 @@
+llama-index 
+chromadb 
+flask 
+python-dotenv 
+groq 
+transformers 
+torch
+llama-index-vector-stores-chroma
+llama-index-embeddings-huggingface
+llama-index-llms-groq

@@ -1,0 +1,3 @@
+groq
+"fastrtc[vad, stt, tts]"
+python-dotenv

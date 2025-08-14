@@ -1,0 +1,82 @@
+----------------------------------------------------------------------------Payment-----------------------------------------------------------------------------------
+
+Question: How Can I Add New Payments to Invoice?
+
+Answer: To add new payments to unpaid invoices, please follow the below steps. 1) Log on to Moon Invoice, 2)Click on Sales > Payments, 3) Click on the '+' icon to add new payments.
+
+Question: How Can I Edit the Payments?
+
+Answer: To edit the payments, please follow the below steps. 1)Log on to Moon Invoice, 2)Click on Sales > Payments, 3)Click on the pen icon to edit the payments.
+
+Question: How Can I Preview the Payment Receipt?
+
+Answer: To preview the payment receipt, follow these steps 1)Log on to Moon Invoice, 2)Click on Sales > Payments, 3)Click on any existing payment that you wish to preview, 4)Click on the eye icon to preview the payment receipt
+
+Question: How Can I Email the Payment Receipt?
+
+Answer: Email payment receipts using the below-mentioned steps 1)Log on to Moon Invoice, 2)Click on Sales > Payments, 3)Click on any existing payment entry that you wish to email, 4)Click on the email icon to send the receipt via email
+
+Question: How Can I Trash Any Existing Payment Receipts?
+
+Answer: To trash the payment receipt, follow the below steps: 1)Log on to Moon Invoice, 2)Click on Sales > Payments, 3)Click on any existing payment receipt that you want to send to the trash, 4)Click on the show more option > Trash, 5)After clicking on the trash option, confirm if you wish to trash the payment. Click on yes to proceed. 
+
+Question: How Can I Filter Payments By Type and Customer?
+
+Answer: Users can filter the payments with predefined options in the filter drop-down menu. Follow these steps. 1)Log on to Moon Invoice, 2)Click on, 3)Sales > Payments, 4)Click on the filter icon to list the different types of filters.
+
+--------------------------------------------------------------------------------Credit Notes-------------------------------------------------------------------------------
+
+Question: How To Create A New Credit Note?
+
+Answer: To create a credit note with Moon Invoice, follow the instructions below.1)Login to Moon Invoice account, 2)Click on Sales Module, 3)Click on Credit Notes, 4)Click on the '+' sign, 5)Fill the mentioned credit note fields for creating a new credit note (choose customer name, address, credit note #, select currency, and date), 6)Add products, add tasks, 7)Mention terms and conditions, describe notes, 8)Add an attachment, 9)Click on 'Save'.
+
+Question: What Are The Different Credit Note Fields?
+
+Answer: Moon Invoice helps businesses to create multiple credit notes in minutes. Here are the different credit note fields that need to be filled.1)Customer name (select or add), 2)Credit note number (automatically added or create new series), 3)Currency, 4)Date, 5)Address, 6)Item details, including quantity and rate, 7)Description of the product or task, 8)Terms and conditions, 9)Notes, 10)Attachment.
+
+Question: How Can I Add My Own Credit Note Number Series?
+
+Answer: Users can manually create their number series by typing the credit note number in the Credit note #. 1)Click on Credit Note, 2)Click on the '+' sign to generate a new CN, 3)Manually add CN number in CN#, e.g. Moon CN 1, 4)nter other credit note details and click on 'Save.'. After creating the new CN series, all the upcoming credit notes will be saved in the succeeding number—for example, Moon CN 2, Moon CN 3, and so on.
+
+Question: How Can I Add An Attachment To A Credit Note?
+
+Answer: Users can add a PDF attachment while creating a credit note. To add an attachment, you need to follow the below steps. 1)Click on the '+' sign to add a credit note, 2)Clicking on the attachment option, you must select the file you need to add, 3)Click open to add an attachment, 4)Click on save for creating a credit note with an attachment. Note: Attachment supports both PDF and image documents.  
+
+Question: How Can I Add A Signature To A Credit Note?
+
+Answer: To add a signature to an existing credit note, follow the steps below.1)Select a credit note to open it, 2)Click on the 'S' sign to add a signature, 3)A popup will appear on the screen, 4)Add name, title, date, and signature.5)To add a signature, you can use the mouse pointer by adjusting the thickness. Also, users can upload the digital signature directly to an existing credit note, 6)Click on done to add signature
+
+Question: How To Directly Print A Credit Note?
+
+Answer: 1)To print a credit note, you need to add a credit note, 2)Or, open an existing credit note and click on the print sign, 3)Click on the print button to print the credit note. 
+
+Question: How to Set a Thermal Printer for Credit Notes?
+
+Answer: Users must follow the instructions for printing the credit notes using the thermal printer below. 1)Log in to Moon Invoice, 2)Click on Sales > Credit Notes
+
+Question: How Can I Edit The Credit Note?
+
+Answer: To edit a credit note, follow the below steps. 1)Click on an existing credit note, and open it, 2)Click on the pen icon to edit the credit note. 
+
+Question: How Can I Preview The Credit Note?
+
+Answer: To preview a credit note, follow the below instructions. 1)Click on the credit note that you wish to preview, 2)Click on the eye icon to preview it.
+
+
+Question: How Can I Email The Credit Notes To The Customers?
+
+Answer: Follow these steps to send a credit note as an email to your customer/vendor/client. 1)Click on the credit note that you wish to send via email, 2)Click on the mail sign on the top of the credit note, 3)A popup screen will appear with credit note details for sending an email directly using the Moon Invoice dashboard. 
+
+
+Question: How Can I Duplicate An Existing Credit Note?
+
+Answer: Users can duplicate existing credit notes with a single click. For the same, follow the mentioned steps. 1)Click on any existing credit note, and open it, 2)Click on the show more option to duplicate the credit note. 
+
+
+Question: How Can I Move A Credit Note Trash?
+
+Answer: To trash a credit note, you need to follow the below steps. 1)Click on any existing credit note that you want to move to the trash, 2)Click on the three dots on the top of the screen, 3)Click on 'trash.'
+
+Question: How Can I Track Credit Note Activities?
+
+Answer: To track the credit note activities, follow the below steps: 1)Click on any credit note, 2)Click on the three dots at the top of the screen, 3)Click on Activity Log, 4)The activity log displays all the activities, including credit note creation, updation, email delivered, email viewed, and email clicked.

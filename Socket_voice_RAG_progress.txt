@@ -1,0 +1,123 @@
+RAG Improvements: 1) Welcome message -> frontend side.✅
+		  2) Display user and assistant message right after getting it from server side.✅
+		  3) changes on frontend side so user can easily identify his voice is recording.
+		  4) check claude history to make RAG more faster by caching the embedding in RAM.
+		  5) Make frontend for fastrtc server to compare it's delay with current system.✅
+		  6) significantly reduced the delay with help of claude.(need to check input audio file delete logic)✅
+
+******check there should not be two files for rag api in server for socket project because last time changes made in prompt didn't reflected and also i code i got to make change was first build even i have made changes in between that in not there. ✅
+
+what is pm2
+
+******check Wednesday 12-3-25 history for realtime tts (streaming)
+
+spectrogram
+
+RAG when user uploads new file the old chat history should be deleted ✅
+File upload API ✅
+Frontend Audio streaming ✅
+frontend chat display ✅
+frontend output audio display 
+prompt change if needed
+code structuring 
+
+server 4 client 3 ✅
+server 4 client 4 ✅
+server 5 client 5 
+
+currently best server5 and server temp_client5.py
+server5 and new_client5 is not working well because no rerun is happening
+
+store conversation in chat history list(frontend side) see gpt history to implement in "fix playsound error" chat name 
+
+claude: Audio Duration Validation issue in server chat name and see last message to store audio even rms value less then threshold.
+
+chatgpt chat name: python socket.io example to work on optimizing noise part.
+
+ ************Use ChromaDB namespaces if you want to store multiple vector stores efficiently.
+*************If authentication exists (JWT or OAuth), replace uuid with user_id from authentication.
+
+conda create -p venv python=3.10
+
+work done(14/2): delete output file and sid support in upload endpoint
+
+unstucturedPDFloader failed to test
+pymupdf not good
+mathpix paid tool
+
+Rule based methods:
+pypdf2
+pdfquery
+pdfminer - supports images and table extraction
+pdfplumber - no detail is mention about images and table extraction in langchain documentation.
+Camelot
+tabula-py
+pypdf - text detection is good but problem with sequence.
+
+Pipeline based methods:
+Marker- good with tables but fancy text detection is not good because some times it considered under images.
+PyMuPDF- some text not detected but almost retain sequency of text.(supports images and table extraction)
+DOCquery - not usefull for our RAG case.
+pagermage
+Unstructured - good with menus but prices are not right after the dish same case with pypdf and pymupdf and unstructured is good in retaining sequence. and as output are not coming in markdown format table are converted to simple text.
+docling
+upstage
+
+small model based models:
+Donut
+Docquery
+Nougat
+Pix2Struct
+Unstructured
+
+Larger Multi-modal models
+Table Transformer(TILT)
+Doc classification
+Detection(mask R-CNN)
+OCR(Tesseract)
+LSTMs
+CNNs
+
+list of pdf parser provided in langchain:
+
+PyPDF	✅
+Unstructured	✅	
+Amazon Textract	
+MathPix	- might be more usefull with equation and all and it is paid.
+PDFPlumber	
+PyPDFDirectry - handles multiple pdfs from directory, mainly uses pypdf.	
+PyPDFium2	
+PyMuPDF	 ✅	
+PDFMiner	
+Upstage Document Parse Loader:paid so will look later.
+Docling - good with text extraction but didn't parse 1222 pdf at all.(in menu sometimes prices are not right after dish name.) not good with tables with export type doc need to check with markdown. table is extracted but not formatted as goods as unstructured and marker.
+Unstract: free for some modes.
+LlamaParse: good with both tables and unstructured menus but sometimes miss some text and issue with api calling and didn't parse 1222 pdf because of Processing error: 'charmap' codec can't encode character '\u2010' in position 416: character maps to <undefined>, some times do over to make tables
+pymupdf4llm: some good features but doesn't work as good as docling when tested it on multiple pdfs.
+
+
+task to do tomorrow:
+pdfplumber
+pdfminer
+unstruct
+pdf2markdown git - error installing pdftotext library
+pypdf4
+
+RAG ENHANCEMENT:
+collection_metadata={"hnsw:space": "cosine"} ? ✅ see chatgpt for details https://chatgpt.com/c/67bee0b4-afb8-8003-b042-23515c43ba11
+document quality filtering ? ✅ see claude for details https://claude.ai/chat/2c96bfcc-791c-46d3-b5a4-466fe06a29c3
+self-critiq step ? 
+hybrid RAG ? 
+similarity and mmr ✅ see chatgpt for details https://chatgpt.com/c/67bee0b4-afb8-8003-b042-23515c43ba11
+
+qtonz, unstructured event register,
+
+Standing elegantly, with feet naturally together, right hand holding a black handbag, left hand hanging naturally, chin slightly raised, short hair slightly curled, delicate pink woolen short jacket with metal buckle decoration, white inner wear, black skirt , black stockings, black patent leather loafers, light green ground background, simple studio shot
+
+Relaxed standing pose, legs naturally crossed, one hand gently touching hair, reddish-brown medium-short hair, white loose hoodie, black shorts, sidewalk scene, green tree background, iron fence, natural light, casual everyday style
+
+Full body composition, serious expression, white sleeveless top, white flared wide-leg trousers, black derby shoes, standing upright, body slightly to the left about 15 degrees, hands naturally deep into the trouser pockets, shoulders relaxed and slightly forward, chin slightly Raise your head, look straight at the camera, look calm and confident, dark gray background, street photography style
+
+Casually leaning posture, right hand supporting the wall, left hand hanging down naturally, right leg standing, left leg naturally bent and crossed, body leaning slightly sideways, hair hanging naturally, denim jacket, brown overalls, black boots, white wall, blue ground , indoor shooting, college style
+
+A male model with a slim build and curly brown hair, standing in a relaxed pose. Generate different outfits on the model, including:\nCasual Look: A white T-shirt, blue denim jeans, and white sneakers.\nFormal Look: A tailored black suit, white dress shirt, and polished dress shoes.

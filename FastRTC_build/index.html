@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot.AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f9fa;
+        }
+        
+        /* Header styles */
+        .header {
+            background-color: #4285f4;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: normal;
+        }
+        
+        .header-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Main content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        /* File upload container */
+        .file-upload-container {
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 550px;
+        }
+        
+        .upload-box {
+            border: 1px dashed #ccc;
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .file-button {
+            background-color: #f1f3f4;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .upload-button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .chatbot-button {
+            background-color: #eaeaea;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .chatbot-button:disabled {
+            background-color: #cccccc;
+            color: #888888;
+            cursor: not-allowed;
+        }
+
+        /* Chat interface */
+        .chat-interface {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 800px;
+            height: 80vh;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chat-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #f1f3f4;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        
+        .message.user {
+            background-color: #4285f4;
+            color: white;
+            margin-left: auto;
+        }
+        
+        .message.assistant {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        
+        .mic-button {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            background-color: #f1f3f4;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .mic-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #5f6368;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.1-.6-.39-1.14-1-1.14z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.1-.6-.39-1.14-1-1.14z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+        }
+
+        .mic-button.active .mic-icon {
+            background-color: #4285f4;
+        }
+
+        .mic-button.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid #4285f4;
+            animation: pulse-rings 1.5s infinite;
+            opacity: 0;
+        }
+
+        .mic-button.active::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid #4285f4;
+            animation: pulse-rings 1.5s infinite 0.5s;
+            opacity: 0;
+        }
+
+        @keyframes pulse-rings {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Subtle size pulse for the mic icon itself */
+        .mic-button.active .mic-icon {
+            animation: pulse-icon 1s infinite alternate;
+        }
+
+        @keyframes pulse-icon {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.15);
+            }
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2d3846;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+        
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 16px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .toast.error {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .toast.warning {
+            background-color: #ffd700;
+            color: black;
+        }
+        
+        .toast.success {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .typing-indicator {
+            padding: 8px 15px;
+            background-color: #e0e0e0;
+            border-radius: 18px;
+            margin-bottom: 15px;
+            display: none;
+            width: fit-content;
+        }
+        
+        .dots {
+            display: inline-flex;
+            gap: 4px;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #5f6368;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+            opacity: 0.5;
+        }
+        
+        .dot:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        
+        .dot:nth-child(3) {
+            animation-delay: 1s;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #4285f4;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        #audio-output {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Toast notification -->
+    <div id="error-toast" class="toast"></div>
+    
+    <!-- Header -->
+    <div class="header">
+        <h1>Chatbot.AI</h1>
+        <div class="header-links">
+            <a href="#">Home</a>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- File Upload Container -->
+        <div class="file-upload-container" id="file-upload-container">
+            <h2>Fill Details To Proceed</h2>
+            
+            <p>Upload File</p>
+            <div class="upload-box">
+                <p id="file-status">No file selected</p>
+                <label class="file-button" for="file-upload">Choose File</label>
+                <input type="file" id="file-upload" style="display: none;">
+                <p id="file-name"></p>
+            </div>
+            
+            <button id="upload-button" class="upload-button" style="display: none;">Upload</button>
+            
+            <button id="chatbot-button" class="chatbot-button" disabled>Go To Voice ChatBot</button>
+        </div>
+        
+        <!-- Chat Interface (hidden initially) -->
+        <div class="chat-interface hidden" id="chat-interface">
+            <div class="chat-area" id="chat-messages">
+                <div class="message assistant" id="welcome-message">
+                    Welcome to ChatBot-AI. your voice-powered assistant for seamless document conversations.
+                </div>
+                <!-- Messages will appear here -->
+                <div class="typing-indicator" id="typing-indicator">
+                    <div class="dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="start-button" class="mic-button">
+                <div class="mic-icon"></div>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 Chatbot.AI. All rights reserved.
+    </div>
+    
+    <audio id="audio-output"></audio>
+
+    <script>
+        let audioContext;
+        let analyser_input, analyser_output;
+        let dataArray_input, dataArray_output;
+        let animationId_input, animationId_output;
+        let chatHistory = [];
+        let peerConnection;
+        let webrtc_id;
+        const audioOutput = document.getElementById('audio-output');
+        const startButton = document.getElementById('start-button');
+        const chatMessages = document.getElementById('chat-messages');
+        const fileUploadContainer = document.getElementById('file-upload-container');
+        const chatInterface = document.getElementById('chat-interface');
+        const fileInput = document.getElementById('file-upload');
+        const fileNameDisplay = document.getElementById('file-name');
+        const fileStatus = document.getElementById('file-status');
+        const uploadButton = document.getElementById('upload-button');
+        const chatbotButton = document.getElementById('chatbot-button');
+        
+        // File upload handling
+        fileInput.addEventListener('change', function() {
+            if (this.files.length > 0) {
+                const fileName = this.files[0].name;
+                fileNameDisplay.textContent = fileName;
+                fileStatus.textContent = "File selected";
+                uploadButton.style.display = 'block';
+            } else {
+                fileNameDisplay.textContent = '';
+                fileStatus.textContent = "No file selected";
+                uploadButton.style.display = 'none';
+            }
+        });
+        
+        uploadButton.addEventListener('click', function() {
+            if (fileInput.files.length === 0) {
+                showToast('Please select a file first', 'error');
+                return;
+            }
+            
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+            
+            // Show loading state
+            uploadButton.innerHTML = `Uploading...`;
+            uploadButton.disabled = true;
+            
+            // Send file to server
+            fetch('https://beta15.moontechnolabs.com/rag-app/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(err => {
+                        throw new Error(err.error || 'Upload failed');
+                    });
+                }
+                return response.json();
+            })
+            .then(data => {
+                showToast(data.message || 'File processed successfully', 'success');
+                uploadButton.innerHTML = `Upload`;
+                uploadButton.disabled = false;
+                chatbotButton.disabled = false;
+                chatbotButton.classList.add('upload-button'); // Optional: make it more prominent
+                chatbotButton.classList.remove('chatbot-button');
+            })
+            .catch(error => {
+                console.error('Error uploading file:', error);
+                showToast(error.message || 'Upload failed. Please try again.', 'error');
+                uploadButton.innerHTML = 'Upload';
+                uploadButton.disabled = false;
+                chatbotButton.disabled = true;
+            });
+        });
+        
+        chatbotButton.addEventListener('click', function() {
+            if (!this.disabled) {
+                fileUploadContainer.classList.add('hidden');
+                chatInterface.classList.remove('hidden');
+                const welcomeMessage = document.getElementById('welcome-message').textContent;
+                chatHistory.push({ role: 'assistant', content: welcomeMessage });
+            
+                // Play welcome audio
+                playWelcomeAudio();
+            }
+            else {
+            // Show error message if someone tries to click a disabled button
+            // (shouldn't happen normally, but just in case)
+            showToast('Please upload a file first', 'error');
+            }
+        });
+        function playWelcomeAudio() {
+            const audioElement = document.getElementById('audio-output');
+            
+            // Set the source of your welcome audio file
+            audioElement.src = "/welcome-message"; // Replace with your actual audio file path
+            
+            // Make sure the audio element is visible/available for playback
+            audioElement.style.display = 'block';
+            
+            // Play the audio
+            audioElement.play()
+                .then(() => {
+                    console.log("Welcome audio played successfully");
+                })
+                .catch(error => {
+                    console.error("Error playing welcome audio:", error);
+                    showToast("Couldn't play welcome audio. Please check your sound settings.", "warning");
+                })
+                .finally(() => {
+                    // Hide the audio element again after playback
+                    setTimeout(() => {
+                        audioElement.style.display = 'none';
+                    }, 100);
+                });
+        }
+        function storeWebRTCID(id) {
+            if (id) {
+                sessionStorage.setItem('webrtc_id', id);
+            }
+        }
+        function sendResetRequest() {
+            const storedID = sessionStorage.getItem('webrtc_id');
+            
+            if (storedID) {
+                // Use the Fetch API with keepalive option to ensure the request completes
+                fetch('https://beta15.moontechnolabs.com/rag-app/reset', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ sid: storedID }),
+                    keepalive: true // This ensures the request completes even if page is unloading
+                }).then(() => {
+                    console.log('Reset request sent successfully');
+                }).catch(error => {
+                    console.error('Error sending reset request:', error);
+                });
+                
+                // Clear the stored ID
+                sessionStorage.removeItem('webrtc_id');
+            }
+        }
+
+        function showToast(message, type = 'error') {
+            const toast = document.getElementById('error-toast');
+            toast.textContent = message;
+            toast.className = `toast ${type}`;
+            toast.style.display = 'block';
+            // Hide toast after 5 seconds
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 5000);
+        }
+        
+        function updateButtonState() {
+            if (peerConnection && (peerConnection.connectionState === 'connecting' || peerConnection.connectionState === 'new')) {
+                startButton.innerHTML = `<div class="spinner"></div>`;
+                startButton.classList.remove('active');
+            } else if (peerConnection && peerConnection.connectionState === 'connected') {
+                startButton.innerHTML = `<div class="mic-icon" style="background-color: #4285f4;"></div>`;
+                startButton.classList.add('active');
+            } else {
+                startButton.innerHTML = `<div class="mic-icon"></div>`;
+                startButton.classList.remove('active');
+            }
+        }
+        
+        function showError(message) {
+            const toast = document.getElementById('error-toast');
+            toast.textContent = message;
+            toast.className = 'toast error';
+            toast.style.display = 'block';
+            // Hide toast after 5 seconds
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 5000);
+        }
+        
+        async function setupWebRTC() {
+            const config = __RTC_CONFIGURATION__;
+            console.log('Using WebRTC config:', config);
+            peerConnection = new RTCPeerConnection(config);
+            const timeoutId = setTimeout(() => {
+                const toast = document.getElementById('error-toast');
+                toast.textContent = "Connection is taking longer than usual. Are you on a VPN?";
+                toast.className = 'toast warning';
+                toast.style.display = 'block';
+                // Hide warning after 5 seconds
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                }, 5000);
+            }, 5000);
+            console.log('Creating PeerConnection', peerConnection);
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    audio: true
+                });
+                // Set up input visualization
+                audioContext = new AudioContext();
+                analyser_input = audioContext.createAnalyser();
+                const inputSource = audioContext.createMediaStreamSource(stream);
+                inputSource.connect(analyser_input);
+                analyser_input.fftSize = 64;
+                dataArray_input = new Uint8Array(analyser_input.frequencyBinCount);
+                function updateAudioLevel() {
+                    analyser_input.getByteFrequencyData(dataArray_input);
+                    const average = Array.from(dataArray_input).reduce((a, b) => a + b, 0) / dataArray_input.length;
+                    const audioLevel = average / 255;
+                    // We don't need visual feedback for audio level in this UI
+                    animationId_input = requestAnimationFrame(updateAudioLevel);
+                }
+                updateAudioLevel();
+                stream.getTracks().forEach(track => {
+                    peerConnection.addTrack(track, stream);
+                });
+                // Add connection state change listener
+                peerConnection.addEventListener('connectionstatechange', () => {
+                    console.log('Connection state:', peerConnection.connectionState);
+                    if (peerConnection.connectionState === 'connected') {
+                        clearTimeout(timeoutId);
+                        const toast = document.getElementById('error-toast');
+                        toast.style.display = 'none';
+                    }
+                    updateButtonState();
+                });
+                // Handle incoming audio
+                peerConnection.addEventListener('track', (evt) => {
+                    if (audioOutput.srcObject !== evt.streams[0]) {
+                        audioOutput.srcObject = evt.streams[0];
+                        audioOutput.play();
+                        // Set up output visualization
+                        analyser_output = audioContext.createAnalyser();
+                        const outputSource = audioContext.createMediaStreamSource(evt.streams[0]);
+                        outputSource.connect(analyser_output);
+                        analyser_output.fftSize = 2048;
+                        dataArray_output = new Uint8Array(analyser_output.frequencyBinCount);
+                    }
+                });
+                // Create data channel for messages
+                const dataChannel = peerConnection.createDataChannel('text');
+                dataChannel.onmessage = (event) => {
+                    const eventJson = JSON.parse(event.data);
+                    const typingIndicator = document.getElementById('typing-indicator');
+                    if (eventJson.type === "error") {
+                        showError(eventJson.message);
+                    } else if (eventJson.type === "send_input") {
+                        fetch('/input_hook', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                webrtc_id: webrtc_id,
+                                chatbot: chatHistory
+                            })
+                        });
+                    } else if (eventJson.type === "log") {
+                        if (eventJson.data === "pause_detected") {
+                            typingIndicator.style.display = 'block';
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                        } else if (eventJson.data === "response_starting") {
+                            typingIndicator.style.display = 'none';
+                        }
+                    }
+                };
+                // Create and send offer
+                const offer = await peerConnection.createOffer();
+                await peerConnection.setLocalDescription(offer);
+                await new Promise((resolve) => {
+                    if (peerConnection.iceGatheringState === "complete") {
+                        resolve();
+                    } else {
+                        const checkState = () => {
+                            if (peerConnection.iceGatheringState === "complete") {
+                                peerConnection.removeEventListener("icegatheringstatechange", checkState);
+                                resolve();
+                            }
+                        };
+                        peerConnection.addEventListener("icegatheringstatechange", checkState);
+                    }
+                });
+                webrtc_id = Math.random().toString(36).substring(7);
+                storeWebRTCID(webrtc_id);
+                const response = await fetch('/webrtc/offer', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sdp: peerConnection.localDescription.sdp,
+                        type: peerConnection.localDescription.type,
+                        webrtc_id: webrtc_id
+                    })
+                });
+                const serverResponse = await response.json();
+                if (serverResponse.status === 'failed') {
+                    showError(serverResponse.meta.error === 'concurrency_limit_reached'
+                        ? `Too many connections. Maximum limit is ${serverResponse.meta.limit}`
+                        : serverResponse.meta.error);
+                    stop();
+                    return;
+                }
+                await peerConnection.setRemoteDescription(serverResponse);
+                
+                const eventSource = new EventSource('/outputs?webrtc_id=' + webrtc_id);
+                eventSource.addEventListener("output", (event) => {
+                    const eventJson = JSON.parse(event.data);
+    
+                // Check if this message is a duplicate of the last message
+                const lastMessage = chatHistory.length > 0 ? chatHistory[chatHistory.length - 1] : null;
+                if (!lastMessage || 
+                    lastMessage.role !== eventJson.role || 
+                    lastMessage.content !== eventJson.content) {
+                    
+                    addMessage(eventJson.role, eventJson.content);
+                    }
+                });
+            } catch (err) {
+                clearTimeout(timeoutId);
+                console.error('Error setting up WebRTC:', err);
+                showError('Failed to establish connection. Please try again.');
+                stop();
+            }
+        }
+        
+        function addMessage(role, content) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', role);
+            messageDiv.textContent = content;
+            
+            const typingIndicator = document.getElementById('typing-indicator');
+            chatMessages.insertBefore(messageDiv, typingIndicator);
+            
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            chatHistory.push({ role, content });
+        }
+        
+        function stop() {
+            if (peerConnection) {
+                if (peerConnection.getTransceivers) {
+                    peerConnection.getTransceivers().forEach(transceiver => {
+                        if (transceiver.stop) {
+                            transceiver.stop();
+                        }
+                    });
+                }
+                if (peerConnection.getSenders) {
+                    peerConnection.getSenders().forEach(sender => {
+                        if (sender.track && sender.track.stop) sender.track.stop();
+                    });
+                }
+                peerConnection.close();
+            }
+            if (animationId_input) {
+                cancelAnimationFrame(animationId_input);
+            }
+            if (animationId_output) {
+                cancelAnimationFrame(animationId_output);
+            }
+            if (audioContext) {
+                audioContext.close();
+            }
+            startButton.classList.remove('active'); // Remove active class when stopped
+            updateButtonState();
+        }
+        window.addEventListener('beforeunload', sendResetRequest);
+        window.addEventListener('unload', sendResetRequest);
+        startButton.addEventListener('click', () => {
+            if (!peerConnection || peerConnection.connectionState === 'closed' || peerConnection.connectionState === 'failed') {
+                setupWebRTC();
+            } else {
+                stop();
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,759 @@
+{
+    "languages": null,
+    "filetype": "pdf",
+    "pdf_toc": [],
+    "pages": 1,
+    "ocr_stats": {
+        "ocr_pages": 0,
+        "ocr_failed": 0,
+        "ocr_success": 0,
+        "ocr_engine": "none"
+    },
+    "block_stats": {
+        "header_footer": 0,
+        "code": 0,
+        "table": 0,
+        "equations": {
+            "successful_ocr": 0,
+            "unsuccessful_ocr": 0,
+            "equations": 0
+        }
+    },
+    "computed_toc": [
+        {
+            "title": "The Nines MENU",
+            "level": 1,
+            "page": 0
+        },
+        {
+            "title": "STARTERS & WINGS",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "BONELESS WINGS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "LOADED TOTS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "SEAFOOD STUFFIES",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CRISPY CAULIFLOWER",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "DOUBLE BLEU ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "ICEBERG WEDGE ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "HOUSE SALAD GS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "FRESH ENTRÉE SALADS\n\n![0_image_2.png](0_image_2.png)\n\n",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "& BOWLS",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "SOUTHWEST FAJITA BOWLS GS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "APPLE CRANBERRY ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CHICKEN SALAD GS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CRISPY HONEY MUSTARD ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CHICKEN SALAD",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "ORIGINAL CRISPY ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CHICKEN TENDERS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CHICKEN",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "BUFFALO CHICKEN ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "MAC & CHEESE",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "WRAPS, SANDWICHES",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "COUNTRY FRIED CHICKEN",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "FISH TACOS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CRISPY CAULIFLOWER TACOS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "JUICY BURGERS",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "SEAFOOD TRIO",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "SEAFOOD",
+            "level": 1,
+            "page": 0
+        },
+        {
+            "title": "SEAFOOD TRIO",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "ROASTED SALMON",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "STEAK, TIPS & MORE",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "SIRLOIN TIPS*",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": " & ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CHICKEN TENDERS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "TOP SIRLOIN STEAK*",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "PORK CARNITAS ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "MAC & CHEESE",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "ROYAL SIRLOIN* GS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "LEMONTITO MARTINI\n\n![0_image_7.png](0_image_7.png)\n\n",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "APEROL SPRITZ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "HENDRICK'S GIN & TONIC",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "MANGO MAI TAI",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "MARGARITAS",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "& TACOS",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "\n\n![0_image_9.png](0_image_9.png)\n\n",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "DESSERTS",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "PORK CARNITAS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "FLATBREAD",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "BROCCOLI & ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CHEDDAR SOUP",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "FRENCH ONION SOUP",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CHEESE BURGER*",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "SMOTHERED TIPS* GS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "FRESH FRUIT SANGRIA",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "WOODFORD BOURBON",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "SOUR SMASH",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CRAFTS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "SURF & TURF COMBOS",
+            "level": 1,
+            "page": 0
+        },
+        {
+            "title": "BAKED HADDOCK",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "SIDES",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "COLD BEER",
+            "level": 1,
+            "page": 0
+        },
+        {
+            "title": "MOZZARELLA MOONS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CHICKEN FAJITA",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "FLATBREAD",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "MONSTAH MARGARITA",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "SPICY CRISPY ",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "CHICKEN SANDWICH",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "NEW ENGLAND \n\n![0_image_6.png](0_image_6.png)\n\n",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "FRIED SHRIMP",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "FISH & CHIPS",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "WINE",
+            "level": 2,
+            "page": 0
+        },
+        {
+            "title": "MAKE ANY ENTRÉE A",
+            "level": 3,
+            "page": 0
+        },
+        {
+            "title": "THREE COURSE MEAL",
+            "level": 1,
+            "page": 0
+        },
+        {
+            "title": "COCKTAILS",
+            "level": 1,
+            "page": 0
+        }
+    ]
+}

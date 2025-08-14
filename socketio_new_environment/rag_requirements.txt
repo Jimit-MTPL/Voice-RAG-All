@@ -1,0 +1,21 @@
+langchain 
+chromadb 
+flask 
+transformers 
+sentence-transformers
+groq
+langchain-community
+langchain-groq
+pypdf
+langchain-huggingface
+python-dotenv
+Flask-Cors
+# unstructured
+# pdfminer
+pymupdf
+pip install "unstructured[pdf]"
+langchain-unstructured
+unstructured
+langchain-docling
+pip install rank_bm25
+pip install --upgrade --quiet  flashrank

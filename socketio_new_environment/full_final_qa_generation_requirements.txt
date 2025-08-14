@@ -1,0 +1,13 @@
+huggingface-hub
+llama-index-core
+llama-index-llms-huggingface
+llama-index-embeddings-huggingface
+llama-index-readers-file
+llama-index-vector-stores-chroma
+chromadb
+marker-pdf
+sentence-transformers
+torch
+torch-vision
+transformers==4.45.2
+flair

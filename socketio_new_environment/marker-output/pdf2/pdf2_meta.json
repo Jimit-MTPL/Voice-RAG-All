@@ -1,0 +1,219 @@
+{
+    "languages": null,
+    "filetype": "pdf",
+    "pdf_toc": [],
+    "pages": 9,
+    "ocr_stats": {
+        "ocr_pages": 0,
+        "ocr_failed": 0,
+        "ocr_success": 0,
+        "ocr_engine": "none"
+    },
+    "block_stats": {
+        "header_footer": 13,
+        "code": 0,
+        "table": 2,
+        "equations": {
+            "successful_ocr": 0,
+            "unsuccessful_ocr": 0,
+            "equations": 0
+        }
+    },
+    "computed_toc": [
+        {
+            "title": "Flexible MBAs \n\n![1_image_0.png](1_image_0.png)\n\n\nFor Those Made to Do",
+            "level": 3,
+            "page": 1
+        },
+        {
+            "title": "Be the best leader you can be",
+            "level": 4,
+            "page": 1
+        },
+        {
+            "title": "Gain the digital skills the 21st century demands",
+            "level": 4,
+            "page": 1
+        },
+        {
+            "title": "Make personal career connections ",
+            "level": 4,
+            "page": 1
+        },
+        {
+            "title": "Built in Flexibility for \nWorking Professionals",
+            "level": 2,
+            "page": 2
+        },
+        {
+            "title": "Your Part-Time MBA\nat a Glance",
+            "level": 2,
+            "page": 3
+        },
+        {
+            "title": "Executive MBA",
+            "level": 4,
+            "page": 3
+        },
+        {
+            "title": "Hybrid MBA",
+            "level": 4,
+            "page": 3
+        },
+        {
+            "title": "YEAR 1 ",
+            "level": 4,
+            "page": 3
+        },
+        {
+            "title": "YEAR 2",
+            "level": 4,
+            "page": 3
+        },
+        {
+            "title": " Your \n Part-Time",
+            "level": 1,
+            "page": 4
+        },
+        {
+            "title": " MBA\n Curriculum",
+            "level": 1,
+            "page": 4
+        },
+        {
+            "title": "Which Electives Will ",
+            "level": 2,
+            "page": 5
+        },
+        {
+            "title": "You Choose?",
+            "level": 2,
+            "page": 5
+        },
+        {
+            "title": "Sample electives ",
+            "level": 4,
+            "page": 5
+        },
+        {
+            "title": "Innovation",
+            "level": 4,
+            "page": 5
+        },
+        {
+            "title": "Entrepreneurship ",
+            "level": 4,
+            "page": 5
+        },
+        {
+            "title": "Finance",
+            "level": 4,
+            "page": 5
+        },
+        {
+            "title": "Add more skills and experience to \nyour resume",
+            "level": 4,
+            "page": 5
+        },
+        {
+            "title": "What's included in the package?",
+            "level": 4,
+            "page": 5
+        },
+        {
+            "title": "Business Analytics ",
+            "level": 4,
+            "page": 5
+        },
+        {
+            "title": "Marketing ",
+            "level": 4,
+            "page": 5
+        },
+        {
+            "title": "Learning From the Experts \nNever Stops",
+            "level": 3,
+            "page": 6
+        },
+        {
+            "title": "Expert Career Coaching",
+            "level": 2,
+            "page": 6
+        },
+        {
+            "title": "An elective a year for life",
+            "level": 4,
+            "page": 6
+        },
+        {
+            "title": "Passionate professors from the real \nbusiness world ",
+            "level": 4,
+            "page": 6
+        },
+        {
+            "title": "Personal career advising",
+            "level": 4,
+            "page": 6
+        },
+        {
+            "title": "Skills workshops ",
+            "level": 4,
+            "page": 6
+        },
+        {
+            "title": "Invaluable connections ",
+            "level": 4,
+            "page": 6
+        },
+        {
+            "title": "Fund Your Future",
+            "level": 2,
+            "page": 7
+        },
+        {
+            "title": "Partial scholarships",
+            "level": 4,
+            "page": 7
+        },
+        {
+            "title": "Needs-based financial aid",
+            "level": 4,
+            "page": 7
+        },
+        {
+            "title": "Asking your company to help fund your \npart-time MBA ",
+            "level": 4,
+            "page": 7
+        },
+        {
+            "title": "Loans & government support ",
+            "level": 4,
+            "page": 7
+        },
+        {
+            "title": "Ready to Apply?",
+            "level": 2,
+            "page": 7
+        },
+        {
+            "title": "Entry requirements ",
+            "level": 4,
+            "page": 7
+        },
+        {
+            "title": "How to apply",
+            "level": 4,
+            "page": 7
+        },
+        {
+            "title": "interview",
+            "level": 4,
+            "page": 7
+        },
+        {
+            "title": "HULT.EDU/EMBA",
+            "level": 2,
+            "page": 8
+        }
+    ]
+}
